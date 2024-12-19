@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh; /* Ensure the content can take up the full height */
+    background: #1F243A;
+    border: 1px solid #6096BA;
+    display: flex;
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center; /* Center items vertically */
+    padding: 0 40px; /* Add padding for spacing */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    overflow: auto; /* Allow scrolling if the content overflows */
+  }
+  
+  /* Links Section */
+  .links h2 {
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .links h3 {
+    font-size: 20px;
+    color: #6096BA;
+  }
+  
+  .links p, .links ul {
+    font-size: 16px;
+    color: #D9D9D9;
+    line-height: 1.5;
+  }
+  
+  .links ul {
+    padding-left: 20px;
+  }
+  
+  .links a {
+    color: #6096BA;
+    text-decoration: none;
+  }
+  
+  .links a:hover {
+    text-decoration: underline;
+  }
+  

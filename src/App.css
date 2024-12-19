@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Caveat:wght@400&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: auto; /* Allow scrolling */
+  width: 100%;
+  min-height: 100vh;
+  background: #1F243A;
+  border: 1px solid #6096BA;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column;
+}
+
+/* App Container */
+.app-container {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  position: fixed;
+  background: #1F243A;
+  overflow: auto;
+  border: 1px solid #6096BA;
+  display: flex;
+  justify-content: space-between; /* Space between left and right sections */
+  align-items: center; /* Center items vertically */
+  padding: 0 40px; /* Add padding for spacing */
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Left Section for Text (Titles & Subtitle) */
+.left-section {
+  display: flex;
+  flex-direction: column; /* Stack titles and subtitle vertically */
+  justify-content: center;
+  align-items: flex-start; /* Align left */
+  margin-left: 30px; /* Ensure a bit of space from the left side */
+}
+
+.title {
+  color: #D9D9D9;
+  font-family: 'Cedarville Cursive', cursive;
+  font-weight: 400;
+  word-wrap: break-word;
+  margin: 10px 0;
+}
+
+.title.system,
+.title.design {
+  font-size: 128px;
+  text-align: left;
+}
+
+.subtitle {
+  color: #D9D9D9;
+  font-size: 36px;
+  font-family: 'Caveat', cursive;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 20px;
+}
+
+/* Right Section for Cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns for cards */
+  gap: 30px; /* Adds space between cards */
+  margin-right: 30px; /* Space from the right edge */
+  width: 60%;
+}
+
+/* Card */
+.card {
+  width: 275px;
+  height: 300px;
+  background: #A3B8D3;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
+  text-decoration: none;
+  color: #1F243A;
+  text-align: center;
+}
+
+/* Button Styles */
+.button {
+  width: 156px;
+  height: 58px;
+  background: #6096BA;
+  border-radius: 20px;
+  text-align: center;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background: #4A7B9D;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  background: #3E6887;
+  transform: translateY(0);
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  /* Adjust the left section's title font sizes for smaller screens */
+  .title.system,
+  .title.design {
+    font-size: 64px;
+  }
+
+  /* Adjust the subtitle for smaller screens */
+  .subtitle {
+    font-size: 24px;
+  }
+
+  /* Adjust card layout for smaller screens */
+  .card-container {
+    grid-template-columns: 1fr; /* Stack the cards vertically */
+    width: 100%;
+  }
+
+  /* Adjust card size for smaller screens */
+  .card {
+    width: 100%;
+    height: auto; /* Let the card height be adjusted automatically */
+    padding: 15px;
+  }
+
+  /* Adjust button size for smaller screens */
+  .button {
+    width: 140px;
+    height: 50px;
+  }
+}
+
+/* Page Container for Subpages */
+.ete-page {
+  padding: 40px;
+  background: #1F243A;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #D9D9D9;
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* ETE Page Content */
+.ete-page h1 {
+  font-size: 48px;
+  font-family: 'Caveat', cursive;
+  margin-bottom: 20px;
+}
+
+.ete-page ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.ete-page ul li {
+  margin: 10px 0;
+}
+
+.ete-page ul li a {
+  text-decoration: none;
+  color: #6096BA;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.ete-page ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

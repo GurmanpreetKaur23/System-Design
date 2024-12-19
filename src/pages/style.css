@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: #1F243A;
+  border: 1px solid #6096BA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  overflow: auto;
+}
+
+.links {
+  width: 100%;
+  max-width: 800px;
+  background-color: #2A2F49;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.links h2 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.links h3 {
+  font-size: 20px;
+  color: #6096BA;
+  margin-bottom: 10px;
+}
+
+.links p, .links ul {
+  font-size: 16px;
+  color: #D9D9D9;
+  line-height: 1.5;
+}
+
+.links ul {
+  padding-left: 20px;
+}
+
+.links a {
+  color: #6096BA;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Updated button styles */
+.button {
+  background-color: #6096BA;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #4A7B9D;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  background-color: #3E6887;
+  transform: translateY(0);
+}
+
+/* Additional styling for a specific button if needed */
+.button-down {
+  background-color: #6096BA; /* Custom background for specific button */
+}
